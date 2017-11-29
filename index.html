@@ -4,9 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>GitHubの使い方</title>
+    <style>
+    table{
+        text-align: center;
+    }
+    </style>
 </head>
 <body>
-    <p>二回目のGitHub</p>
+    <h1>GitHubの使い方</h1><br>
+    <p>【コマンド紹介】</p>
+    <div id="first">
+        <table border="1">
+            <tr><th>ファイルの作成</th>
+            <td>git add hello.html</td>
+            </tr>
+            <tr>
+                <th>変更結果をローカルリポジトリにコミットする（git commit）</th>
+                <td>git commit -m "add new file"</td>
+            </tr>
+
+            <tr>
+                <th>ファイルが追加されているか確認</th>
+                <td>git status</td>
+            </tr>
+
+            <tr>
+                <th>ローカルリポジトリをプッシュしてリモートリポジトリへ反映させる</th>
+                <td>git push origin master</td>
+            </tr>
+
+            <tr>
+                <th>ファイルやディレクトリをインデックスに追加</th>
+                <td>git add [file_pattern]</td>
+            </tr>
+            
+            <tr>
+                <th>ブランチに対して各種操作を行う</th>
+                <td>git branch</td>
+            </tr>
+
+            <tr>
+                <th>ローカルリポジトリのブランチを切り替える</th>
+                <td>git checkout [branch-name]</td>
+            </tr>        
+            
+            <tr>
+                <th>ローカルリポジトリのコミット履歴を閲覧</th>
+                <td>git log –n 10</td>
+            </tr>
+
+            <tr>
+                <th>既存のリモートリポジトリをローカルに落とす</th>
+                <td>git clone [url]</td>
+            </tr>
+        </table>
+    </div>
+
 </body>
 </html>
