@@ -1,21 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('isbn').addEventListener('change',function(){
+                    location.href = '' + this.value;
+                },false);
+            },false);
+            </script>
 </head>
 <body>
-    <form>
-        <p>寿司を選択してください</p>
-        <select>
-            <option value="maguro">マグロ</option>
-            <option value="salmon">サーモン</option>
-            <option value="egg">たまご</option>
-        </select>
-    </form>
-    <p><img src="../../../画像CJC046EUsAAd8VT.jpg" alt="たまご"></p>
-
+        <form>
+                <label fpr "isbn">寿司</label>
+                <select id="isbn" name="isbn">
+                    <option value="">---寿司---</option>
+                    <option value="maguro.html">マグロ</option>
+                    <option value="salmon.html">サーモン</option>
+                    <option value="egg.html">たまご</option>
+                    
+                </select>
+            </form>
+            <img src="../../画像/egg.jpg" alt="たまごの画像" >
+   
 </body>
 </html>
