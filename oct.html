@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+            document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('isbn').addEventListener('change',function(){
+                    location.href = '' + this.value;
+                },false);
+            },false);
+            </script>
+            <style>
+            .a{
+                background-color: gray;
+            }
+            </style>
+</head>
+<body>
+        <form>
+                <label fpr "isbn">プルダウンメニュー</label>
+                <select id="isbn" name="isbn">
+                    <option value="">---寿司---</option>
+                    <option value="maguro.html">マグロ</option>
+                    <option value="salmon.html">サーモン</option>
+                    <option value="egg.html">たまご</option>
+                    <option value="oct.html">オクトキャット</option>
+                </select>
+            </form>
+            <img src="./画像/oct.jpg" alt="オクトキャットの画像" width="800px" height="600px">
+
+            <h1 id="title">GitHubの使い方</h1><br>
+            
+            <h1>【最初に】githubとは</h1>
+            <p>GitHub（ギットハブ）はソフトウェア開発プロジェクトのための共有ウェブサービスであり、Gitバージョン管理システムを使用する。 Ruby on RailsおよびErlangで記述されており、GitHub社によって保守されている。 主な開発者はChris Wanstrath、PJ Hyett、Tom Preston-Wernerである。 GitHub商用プランおよびオープンソースプロジェクト向けの無料アカウントを提供している。 2009年のユーザー調査によると、GitHubは最もポピュラーなGitホスティングサイトとなった。</p>
+            <br>
+            <center>
+            <p>【コマンド紹介】</p>
+            <div id="first">
+                <table border="1">
+                    <tr><th>ファイルの作成</th>
+                    <td>git add hello.html</td>
+                    </tr>
+                    <tr>
+                        <th>変更結果をローカルリポジトリにコミットする（git commit）</th>
+                        <td>git commit -m "add new file"</td>
+                    </tr>
+        
+                    <tr>
+                        <th>ファイルが追加されているか確認</th>
+                        <td>git status</td>
+                    </tr>
+        
+                    <tr>
+                        <th>ローカルリポジトリをプッシュしてリモートリポジトリへ反映させる</th>
+                        <td>git push origin master</td>
+                    </tr>
+        
+                    <tr>
+                        <th>ファイルやディレクトリをインデックスに追加</th>
+                        <td>git add [file_pattern]</td>
+                    </tr>
+                    
+                    <tr>
+                        <th>ブランチに対して各種操作を行う!</th>
+                        <td>git branch</td>
+                    </tr>
+        
+                    <tr>
+                        <th>ローカルリポジトリのブランチを切り替える</th>
+                        <td>git checkout [branch-name]</td>
+                    </tr>        
+                    
+                    <tr>
+                        <th>ローカルリポジトリのコミット履歴を閲覧</th>
+                        <td>git log –n 10</td>
+                    </tr>
+        
+                    <tr>
+                        <th>既存のリモートリポジトリをローカルに落とす</th>
+                        <td>git clone [url]</td>
+                    </tr>
+                </table>
+            </div>
+        </center>
+        <br>
+        <br>
+        <h1>Github Pagesの作り方</h1>
+        <ul>
+            <li>1.GitHub Pagesの種類</li>
+            <li>2.リポジトリの作成（プロジェクト、ユーザー）</li>
+            <li>3.htmlを作成</li>
+            <li>4.GitHubへPush</li>
+            <li>5.確認</li>
+        </ul>
+        <br>
+        <br>
+        <h1>GitHubPagesの更新の仕方</h1>
+        <p>ファイルの更新が終わったら、下記のように入力して変更をコミットしてください。</p><br>
+           <div class="a">
+            <p>$ git add --all</p><br>
+            <p>$ git commit -m "Update page"</p><br>
+             
+           </div>
+             <p>次に、ユーザサイトならば「master」ブランチをプッシュしてください。</p><br>
+            
+            <div class="a"><p>$ git push -u origin master</p><br></div>
+            <p>プロジェクトサイトならば「gh-pages」ブランチをプッシュします。</p><br>
+            
+           <div class="a"> <p>$ git push -u origin gh-pages</p><br></div>
+             
+            
+            <p>再度ブラウザで自分のページのURLへアクセスして、正しく更新されているかを確認してください。</p>
+   
+</body>
+</html>
