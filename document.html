@@ -3,7 +3,31 @@
 <head>
 <meta charset="utf-8">
 <title>Documentオブジェクトテスト用コード</title>
+
+<style>
+    h1{
+        color: yellow;
+    }
+    body{
+    background-image: url("./images/tinkle.gif");
+    /* background-repeat: no-repeat;: */
+    background-size: cover;
+    border: dotted yellow;
+    }
+    img{
+        width:500px;
+        height: 500px;
+    }
+</style>
 <script>
+
+document.addEventListener('DOMContentLoaded',function(){
+                document.getElementById('isbn').addEventListener('change',function(){
+                    location.href = '' + this.value;
+                },false);
+            },false);
+
+
 window.addEventListener("load", function(){
 
     // 画像インデックス
@@ -20,16 +44,16 @@ window.addEventListener("load", function(){
         // 画像srcを変更
         switch(imageIndex) {
             case 0:
-                imageSrc = "./images/flower.jpg";
+                imageSrc = "./images/good.gif";
                 break;
             case 1:
-                imageSrc = "./images/sea.jpg";
+                imageSrc = "./images/hana.gif";
                 break;
             case 2:
-                imageSrc = "./images/fruit.jpg";
+                imageSrc = "./images/uina.gif";
                 break;
             case 3:
-                imageSrc = "./images/house.jpg";
+                imageSrc = "./images/funny.gif";
                 break;
         }
         document.getElementById("image").src = imageSrc;
@@ -39,7 +63,27 @@ window.addEventListener("load", function(){
 </script>
 </head>
 <body>
+<center>
+        <div>
+                <h1>～お気に入り画像集～</h1>
+            </div>
+        <form>
+                <label fpr "isbn">項目を選択：</label>
+                <select id="isbn" name="isbn">
+                    <option value="">さあ、好きなメニューを選びな！</option>
+                    <option value="maguro.html">マグロ</option>
+                    <option value="salmon.html">サーモン</option>
+                    <option value="egg.html">たまご</option>
+                    <option value="oct.html">オクトキャット</option>
+                    <option value="document.html">お気に入りの画像</option>
+                </select>
+            </form>
+        
+<br>
 <button>画像を変更</button>
-<p><img id ="image" src="./images/flower.jpg" alt="花" /></p>
+<p><img id ="image" src="./images/good.gif" alt="gif" /></p>
+</center>
+
+
 </body>
 </html>
