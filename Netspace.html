@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>ブラウザ判定</title>
+    <style>
+        h1 {
+  padding: .25em 0 .5em .75em;
+  border-left: 6px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-size: 20px;
+}
+    </style>
+</head>
+
+<body>
+    <h1>アプリケーション名</h1>
+    <span id="appName"></span>
+    </br>
+    
+    </br>
+    <p id="userAgent"></p>
+
+    <h1>お使いのブラウザ</h1>
+    <script>
+
+        var nvName = navigator.appName;
+        var nvVersion = navigator.appVersion;
+        var nvUsAgent = navigator.userAgent;
+
+        //１．Internet Explorerか調べる
+        if (nvName.indexOf("Internet Explorer") > -1) {
+            document.write("Internet Explorer");
+        }
+        else {
+            //２．Operaか調べる
+            if (nvName.indexOf("Opera") > -1) {
+                document.write("Opera");
+            }
+            else {
+                //３．「Safari」が含まれるか調べる
+                if (nvVersion.indexOf("Safari") > -1) {
+                    //４．SafariかChromeを見分ける
+                    if (nvVersion.indexOf("Chrome") > -1) {
+                        document.write("Google Chromeです。");
+                    }
+                    else {
+                        document.write("Safari");
+                    }
+                }
+                else {
+                    //５．FireFoxかその他のブラウザかを見分ける
+                    if (nvUsAgent.indexOf("Firefox") > -1) {
+                        document.write("FireFox");
+                    }
+                    else {
+                        document.write("その他のブラウザ");
+                    }
+                }
+            }
+        }
+        document.getElementById("appName").innerHTML = navigator.appName;
+       
+    </script>
+    <br>
+    <br>
+    <h1>お使いのバージョン</h1>
+    <span id="appVersion"></span>
+
+    <script>
+     document.getElementById("appVersion").innerHTML = navigator.appVersion;
+    </script>
+    
+</body>
+
+</html>
