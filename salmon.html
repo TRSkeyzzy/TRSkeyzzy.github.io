@@ -5,31 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
+    <title>中トロ</title>
 
-    
+
     <script>
-            document.addEventListener('DOMContentLoaded',function(){
-                document.getElementById('isbn').addEventListener('change',function(){
-                    location.href = '' + this.value;
-                },false);
-            },false);
-            </script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = '' + this.value;
+            }, false);
+        }, false);
+    </script>
 </head>
+
 <body>
     <center>
         <form>
-                <label fpr "isbn">項目を選択：</label>
-                <select id="isbn" name="isbn">
-                    <option value="">さあ、好きなメニューを選びな!</option>
-                    <option value="maguro.html">マグロ【赤身】</option>
-                    <option value="salmon.html">マグロ【中トロ】</option>
-                    <option value="egg.html">マグロ【大トロ】</option>
-                    <option value="oct.html">オクトキャット</option>
-                    <option value="document.html">お気に入りの画像</option>
-                </select>
-            </form>
-            <img src="./画像/中トロ.jpg" alt="中トロの画像" width="800px" height="600px">
-        </center>
+            <label fpr "isbn">項目を選択：</label>
+            <select id="isbn" name="isbn">
+                <option value="">お好きなメニューをお選びください</option>
+                <option value="maguro.html">マグロ【赤身】</option>
+                <option value="salmon.html">マグロ【中トロ】</option>
+                <option value="egg.html">マグロ【大トロ】</option>
+                <option value="oct.html">オクトキャット</option>
+                <option value="document.html">お気に入りの画像</option>
+                <option value="Netspace.html">ブラウザの判別</option>
+                <option value="Window.html">Windowオブジェクトについて</option>
+                <option value="console.html">consoleオブジェクトについて</option>
+                <option value="time.html">タイマー</option>
+            </select>
+        </form>
+        <img src="./画像/中トロ.jpg" alt="中トロの画像" width="800px" height="600px">
+    </center>
 </body>
+
 </html>

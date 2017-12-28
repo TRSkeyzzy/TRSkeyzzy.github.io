@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Consoleオブジェクトについて</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = '' + this.value;
+            }, false);
+        }, false);
+    </script>
+    <style>
+        .t_standard {
+            padding: .6em 1em;
+            background: #666;
+            background: -webkit-linear-gradient(top, #f00 0%, #c00 100%);
+            background: linear-gradient(to bottom, #f00 0%, #c00 100%);
+            border-top: 1px solid #ccc;
+            border-right: 10px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            border-left: 30px double #ccc;
+            border-radius: 7px;
+            color: #ddd;
+            font-weight: 600;
+            font-size: 1.25em;
+            width: 200px;
+        }
+
+        .t_soft {
+            padding: .6em 1em;
+            background: #fff;
+            background: -webkit-linear-gradient(top, #eee 0%, #ccc 100%);
+            background: linear-gradient(to bottom, #eee 0%, #ccc 100%);
+            border-top: 1px solid #888;
+            border-right: 10px solid #aaa;
+            border-bottom: 1px solid #888;
+            border-left: 30px double #aaa;
+            border-radius: 7px;
+            color: #f00;
+            font-weight: 600;
+            font-size: 1.25em;
+            width: 200px;
+        }
+
+        .t_hard {
+            padding: .6em 1em;
+            background: #666;
+            background: -webkit-linear-gradient(top, #666 0%, #252525 100%);
+            background: linear-gradient(to bottom, #666 0%, #252525 100%);
+            border-top: 1px solid #888;
+            border-right: 10px solid #f00;
+            border-bottom: 1px solid #888;
+            border-left: 30px double #f00;
+            border-radius: 7px;
+            color: #ddd;
+            font-weight: 600;
+            font-size: 1.25em;
+            width: 200px;
+        }
+
+        h1 {
+            padding-bottom: .5em;
+            border-bottom: 1px solid #ccc;
+        }
+
+        h1:first-letter {
+            margin-right: .1em;
+            font-size: 1.5em;
+        }
+
+        .under {
+            background: linear-gradient(transparent 70%, orange 70%);
+        }
+
+        .line {
+            border-top: dotted 2px rgb(207, 200, 200);
+            margin-left: 20px;
+            margin-right: 20px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form>
+            <label fpr "isbn">項目を選択：</label>
+            <select id="isbn" name="isbn">
+                <option value="">お好きなメニューをお選びください</option>
+                <option value="maguro.html">マグロ【赤身】</option>
+                <option value="salmon.html">マグロ【中トロ】</option>
+                <option value="egg.html">マグロ【大トロ】</option>
+                <option value="oct.html">オクトキャット</option>
+                <option value="document.html">お気に入りの画像</option>
+                <option value="Netspace.html">ブラウザの判別</option>
+                <option value="Window.html">Windowオブジェクトについて</option>
+                <option value="console.html">consoleオブジェクトについて</option>
+                <option value="time.html">タイマー</option>
+            </select>
+        </form>
+    </center>
+    <h1>Consoleオブジェクトについて</h1>
+    <div id="one">
+        <p>こんにちは。
+            <span style="font-size:30px">寺崎</span>です。
+            <br> 今回は、
+            <span class="under">consoleオブジェクト</span>について説明をしていきたいと思います。</p>
+        <br>
+        <p>
+            <span style="font-size:30px">さて</span>、皆さんはconsoleと言われて何を思い浮かべるでしょうか？</p>
+        <br>
+        <p>それはもちろん授業でたくさんやってきた、console.
+            <span style="font-size:60px">log</span>ですよね？</p>
+        <br>
+        <p>Javascriptのコードをデバッグする際に、このconsole.logを使ってメッセージやオブジェクトの内容をログに表示することがあるかと思いますが、
+            <br>この「console」オブジェクト、実はlogメソッド以外にも、
+            <span style="font-size:20px">な</span>、
+            <span style="font-size:25px">な</span>、
+            <span style="font-size:30px">なんと</span>
+            <span class="under" style="font-size:30px">１８個</span>ものメソッドがあります。
+        </p>
+        <br>
+        <p>
+            以下はその１８個のメソッドの一覧です。
+        </p>
+        <ul class="item-list">
+            <br />
+            <li>assert</li>
+            <br />
+            <li>count</li>
+            <br />
+            <li>debug</li>
+            <br />
+            <li>dir</li>
+            <br />
+            <li>dirxml</li>
+            <br />
+            <li>error</li>
+            <br />
+            <li>group</li>
+            <br />
+            <li>groupCollapsed</li>
+            <br />
+            <li>groupEnd</li>
+            <br />
+            <li>info</li>
+            <br />
+            <li>log</li>
+            <br />
+            <li>markTimeline</li>
+            <br />
+            <li>profile</li>
+            <br />
+            <li>profileEnd</li>
+            <br />
+            <li>time</li>
+            <br />
+            <li>timeEnd</li>
+            <br />
+            <li>timeStamp</li>
+            <br />
+            <li>trace</li>
+            <br />
+            <li>warn</li>
+            <br />
+        </ul>
+
+        <br>
+        <P>こんな感じで多スギィるほどあるので、今回は、あえて、みんなが紹介しなさそうなマイナーなところを
+            <br>
+            <span style="font-size:30px">３つ</span>ほどにしぼって説明したいと思います。
+        </P>
+        <br>
+    </div>
+    <div class="line">
+    </div>
+    <br>
+    <div id="two">
+        <h2 class="t_standard">assertメソッド</h2><br>
+        <p>まず１つ目に紹介していくメソッドが
+            <span style="font-size:20px">assertメソッド</span>です。
+            <br>このメソッドは、第一引数(expression)がfalseの場合にのみ、 第二引数(message-object)の内容を表示します。
+            <br> 例えば以下のような使い方をします。
+        </p>
+        <img src="./画像/いち.PNG">
+        <br>
+        <p>↓　↓　↓　↓</p>
+        <img src="./画像/に.PNG">
+        <p>上記の例では、hoge関数に0以下の数を渡しているため、結果としてfalseが返ってきています。
+            <br>そのため、assertメソッドの第二引数で渡したメッセージが表示されています。 メソッドのテストをするとき等に便利なメソッドですね。
+        </p>
+        <br>
+    </div>
+    <div class="line"></div>
+    <div id="three">
+        <br>
+        <h2 class="t_soft">dirxmlメソッド</h2>
+        <br>
+        <p>このメソッドは引数で渡されたDOMオブジェクト(HTML, XML)の内容をツリー形式で出力するメソッドです。
+            <br> 以下が使い方となります。
+        </p>
+        <br>
+        <img src="./画像/さん.PNG">
+        <br>
+        <p>↓　↓　↓　↓</p>
+        <img src="./画像/よん.PNG">
+        <p>DOMのプロパティを表示したいときはdirメソッド、
+            <br>ツリーを表示したいときはdirxmlメソッドというふうに使い分けをするといいかもしれません。
+        </p>
+        <br>
+    </div>
+    <div class="line"></div>
+    <br>
+    <div id="four">
+        <h2 class="t_hard">timeStampメソッド</h2><br>
+        <p>このtimeStampメソッドは、メソッド実行時の時間をlogに出力するメソッドです。
+            <br>以下、使用例でございます。
+        </p><br>
+        <img src="./画像/ご.PNG"><br>
+        <p>↓　↓　↓　↓</p>
+        <img src="./画像/ろく.PNG"><br>
+
+        <p>正直これに関してはあまり使いどころがわかりませんが、<br>
+            常にスクリプトの最初に実行しておくようにすれば、logを見て、<br>
+        「いやん。もうこんな時間。」という感じで時間管理に便利かもしれません( ´∀｀ )</p><br>
+    </div>
+    <div class="line"></div>
+    <br>
+    <p>と、consoleメソッドについての紹介はこんなかんじですかね。</p>
+    <br>
+    <h3>皆さんも機会があればぜひ、今回紹介したものを使ってみてはいかがでしょうか。</h3>
+</body>
+
+</html>

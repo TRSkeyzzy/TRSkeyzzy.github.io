@@ -5,16 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
-    <style>
-    #title{
-        font-size:80px;
-        color:blue;
-        text-align: center;
-    }
-    </style>
 </head>
-
 <body>
-    <h1 id="title">Welcome to ～寺崎Pages～</h1>
+    <script>
+    function hoge() {
+    var ret = 0;
+    for (var i = 0; i < 10000000; i++) {
+        ret += i;
+    }
+ 
+    console.log(ret);
+}
+ 
+function fuga() {
+    hoge();
+    hoge();
+}
+ 
+console.timeStamp('start');
+ 
+hoge();
+fuga();
+ 
+console.timeStamp('stop');
+    </script>
 </body>
 </html>

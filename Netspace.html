@@ -6,19 +6,43 @@
     <title>ブラウザ判定</title>
     <style>
         h1 {
-  padding: .25em 0 .5em .75em;
-  border-left: 6px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  font-size: 20px;
-}
+            padding: .25em 0 .5em .75em;
+            border-left: 6px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-size: 20px;
+        }
     </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = '' + this.value;
+            }, false);
+        }, false);
+    </script>
 </head>
 
 <body>
+    <center>
+        <form>
+            <label fpr "isbn">項目を選択：</label>
+            <select id="isbn" name="isbn">
+                <option value="">お好きなメニューをお選びください</option>
+                <option value="maguro.html">マグロ【赤身】</option>
+                <option value="salmon.html">マグロ【中トロ】</option>
+                <option value="egg.html">マグロ【大トロ】</option>
+                <option value="oct.html">オクトキャット</option>
+                <option value="document.html">お気に入りの画像</option>
+                <option value="Netspace.html">ブラウザの判別</option>
+                <option value="Window.html">Windowオブジェクトについて</option>
+                <option value="console.html">consoleオブジェクトについて</option>
+                <option value="time.html">タイマー</option>
+            </select>
+        </form>
+    </center>
     <h1>アプリケーション名</h1>
     <span id="appName"></span>
     </br>
-    
+
     </br>
     <p id="userAgent"></p>
 
@@ -31,12 +55,12 @@
 
         //１．Internet Explorerか調べる
         if (nvName.indexOf("Internet Explorer") > -1) {
-            document.write("Internet Explorer");
+            document.write("Internet Explorerです。");
         }
         else {
             //２．Operaか調べる
             if (nvName.indexOf("Opera") > -1) {
-                document.write("Opera");
+                document.write("Operaです。");
             }
             else {
                 //３．「Safari」が含まれるか調べる
@@ -46,22 +70,22 @@
                         document.write("Google Chromeです。");
                     }
                     else {
-                        document.write("Safari");
+                        document.write("Safariです。");
                     }
                 }
                 else {
                     //５．FireFoxかその他のブラウザかを見分ける
                     if (nvUsAgent.indexOf("Firefox") > -1) {
-                        document.write("FireFox");
+                        document.write("FireFoxです。");
                     }
                     else {
-                        document.write("その他のブラウザ");
+                        document.write("その他のブラウザだな。");
                     }
                 }
             }
         }
         document.getElementById("appName").innerHTML = navigator.appName;
-       
+
     </script>
     <br>
     <br>
@@ -69,9 +93,9 @@
     <span id="appVersion"></span>
 
     <script>
-     document.getElementById("appVersion").innerHTML = navigator.appVersion;
+        document.getElementById("appVersion").innerHTML = navigator.appVersion;
     </script>
-    
+
 </body>
 
 </html>

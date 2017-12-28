@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>タイマー</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = '' + this.value;
+            }, false);
+        }, false);
+    </script>
+    <style>
+        body {
+            font-family: 'Courier New', sans-serif;
+            font-size: 14px;
+            background: #eee;
+        }
+
+        .container {
+            margin: 20px auto;
+            width: 365px;
+            background: #fff;
+            padding: 15px;
+            text-align: center;
+        }
+
+        #timer {
+            background: #ddd;
+            height: 120px;
+            line-height: 120px;
+            font-size: 40px;
+            margin-bottom: 15px;
+        }
+
+        .controls>div {
+            cursor: pointer;
+            user-select: none;
+            width: 80px;
+            background: #ddd;
+            height: 45px;
+            line-height: 45px;
+            float: left;
+        }
+
+        .controls {
+            overflow: hidden;
+        }
+
+        .controls>div+div {
+            margin-left: 15px;
+        }
+
+        .controls>div:hover {
+            opacity: 0.7;
+        }
+
+        body {
+            background-image: url("./画像/時計.gif");
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form>
+            <label fpr "isbn">項目を選択：</label>
+            <select id="isbn" name="isbn">
+                <option value="">お好きなメニューをお選びください</option>
+                <option value="maguro.html">マグロ【赤身】</option>
+                <option value="salmon.html">マグロ【中トロ】</option>
+                <option value="egg.html">マグロ【大トロ】</option>
+                <option value="oct.html">オクトキャット</option>
+                <option value="document.html">お気に入りの画像</option>
+                <option value="Netspace.html">ブラウザの判別</option>
+                <option value="Window.html">Windowオブジェクトについて</option>
+                <option value="console.html">consoleオブジェクトについて</option>
+                <option value="time.html">タイマー</option>
+            </select>
+        </form>
+        <div class="container">
+            <div id="timer">00:00.000</div>
+            <div class="controls">
+                <div id="min">分</div>
+                <div id="sec">秒</div>
+                <div id="reset">リセット</div>
+                <div id="start">スタート</div>
+            </div>
+        </div>
+        <script>
+            (function () {
+                'use strict';
+                var timer = document.getElementById('timer');
+                var min = document.getElementById('min');
+                var sec = document.getElementById('sec');
+                var reset = document.getElementById('reset');
+                var start = document.getElementById('start');
+
+                var startTime;
+                var timeLeft;
+
+                var timeToCountDown = 0;
+                var timerid;
+                var isrunning = false;
+
+                var ans;
+
+                function updateTimer(t) {
+                    var d = new Date(t);
+                    var m = d.getMinutes();
+                    var s = d.getSeconds();
+                    var ms = d.getMilliseconds();
+                    m = ('0' + m).slice(-2);
+                    s = ('0' + s).slice(-2);
+                    ms = ('00' + ms).slice(-3);
+
+                    timer.textContent = m + ':' + s + '.' + ms;
+                }
+                function countDown() {
+                    timerid = setTimeout(function () {
+
+                        timeLeft = timeToCountDown - (Date.now() - startTime);
+
+                        //console.log(timeLeft);
+                        if (timeLeft < 0) {
+                            isrunning = false;
+                            clearTimeout(timerid);
+                            start.textContent = 'スタート';
+                            timeLeft = 0;
+                            timeToCountDown = 0;
+                            alert('時間です！');
+                            updateTimer(timeLeft);
+                            return;
+                        }
+                        updateTimer(timeLeft);
+                        countDown();
+                    }, 10);
+                }
+
+                start.addEventListener('click', function () {
+                    if (isrunning === false) {
+                        isrunning = true;
+                        start.textContent = 'ストップ';
+                        startTime = Date.now();
+                        countDown();
+                    } else {
+                        isrunning = false;
+                        start.textContent = 'スタート';
+                        timeToCountDown = timeLeft;
+                        clearTimeout(timerid);
+                    }
+                });
+
+                min.addEventListener('click', function () {
+                    if (isrunning === true) {
+                        return;
+                    }
+                    timeToCountDown += 60 * 1000;
+                    if (timeToCountDown >= 60 * 60 * 1000) {
+                        timeToCountDown = 0;
+                    }
+                    updateTimer(timeToCountDown);
+                });
+
+                sec.addEventListener('click', function () {
+                    if (isrunning === true) {
+                        return;
+                    }
+                    timeToCountDown += 1000;
+                    if (timeToCountDown >= 60 * 60 * 1000) {
+                        timeToCountDown = 0;
+                    }
+
+                    updateTimer(timeToCountDown);
+                });
+
+                reset.addEventListener('click', function () {
+                    timeToCountDown = 0;
+                    updateTimer(timeToCountDown);
+                });
+
+                
+                }) ();
+        </script>
+    </center>
+</body>
+
+</html>

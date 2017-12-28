@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Windowオブジェクトについて</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            document.getElementById('isbn').addEventListener('change', function () {
+                location.href = '' + this.value;
+            }, false);
+        }, false);
+    </script>
+    <style>
+        h1 {
+            position: relative;
+            padding: 0 .4em .1em;
+        }
+
+        h1::after {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            z-index: -1;
+            content: '';
+            width: 100%;
+            height: 10px;
+            background-color: #b6f0fc;
+        }
+
+        h2 {
+            position: relative;
+            padding: .75em 1em;
+            background-color: #f0f0f0;
+        }
+
+        h2::before,
+        h2::after {
+            content: '';
+            position: absolute;
+            top: 100%;
+            border-style: solid;
+            border-color: transparent;
+        }
+
+        h2::before {
+            left: 0;
+            border-width: 0 15px 15px 0;
+            border-right-color: #ccc;
+        }
+
+        h2::after {
+            right: 0;
+            border-style: solid;
+            border-width: 15px 15px 0 0;
+            border-top-color: #ccc;
+        }
+
+
+        h3 {
+            padding: .25em 0 .5em .75em;
+            border-left: 6px solid #ccc;
+            border-bottom: 1px solid #ccc;
+            font-size: 20px;
+        }
+
+        .code {
+            background-color: rgb(245, 227, 195);
+            font-size: 20px;
+        }
+
+        .bf::before {
+            content: "※";
+            color: red;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <form>
+            <label fpr "isbn">項目を選択：</label>
+            <select id="isbn" name="isbn">
+                <option value="">お好きなメニューをお選びください</option>
+                <option value="maguro.html">マグロ【赤身】</option>
+                <option value="salmon.html">マグロ【中トロ】</option>
+                <option value="egg.html">マグロ【大トロ】</option>
+                <option value="oct.html">オクトキャット</option>
+                <option value="document.html">お気に入りの画像</option>
+                <option value="Netspace.html">ブラウザの判別</option>
+                <option value="Window.html">Windowオブジェクトについて</option>
+                <option value="console.html">consoleオブジェクトについて</option>
+                <option value="time.html">タイマー</option>
+            </select>
+        </form>
+    </center>
+
+    <h1>
+        <span>便利なメソッドのご紹介</span>
+    </h1>
+    <br>
+    <h2>window.open()メソッド</h2>
+    <br>
+    <div>
+        <h3>意味</h3>
+        <p style="font-size:25px">リンクを別ウィンドウで開く</p>
+        <p>
+            今までは、現在のページでリンクを開く
+            <span style="color:red">location href="URL"</span>　を使っていましたが、
+            <br> 今回紹介するのは、別ページでリンク先を開く
+            <span style="color: red">windw.open("URL")</span>
+            を紹介したと思います。
+        </p>
+        <br>
+        <h3>サンプルコード</h3>
+
+        <p class="code">window.open( "URL");</p>
+        <p>第1パラメータにURLを指定すれば 新しいウィンドウを作ってそこにリンク先をロードします。</p>
+        <p>省略した場合は、"about:blank" になります。
+        </p>
+        <br>
+
+        <p class="code">window.open("URL","new")</p>
+        <p>第2パラメータにはウィンドウ名(
+            <A>タグのTARGET属性と同じ)を指定します。</p>
+        <p>省略した場合は、"_blank" になります。
+            <br> すでに同じ名前のウィンドウが存在すれば、そのウィンドウにリンクされます。
+        </p>
+        <br>
+
+        <p class="code">window.open( "URL" , "" , "width=210,height=160" );</p>
+        <p>第3パラメータにはウィンドウサイズ等を指定することができます。</p>
+        <p>上の例ではウィンドウの幅と高さの設定をしました。このようにカンマ区切りで複数の設定を指定することができます。</p>
+        <br>
+        <h3>使用例</h3>
+        <form>
+            <input type="button" value="わいの寿司のページ" onclick="window.open('https://trskeyzzy.github.io/maguro.html')">
+        </form>
+        <p>こんなコードで書きました。↓参考までにどうぞ。</p>
+        <form action="#">
+            <textarea name="one" rows="6" cols="80">
+            <form>
+                <input type="button" value="わいの寿司のページ" onclick="window.open('https://trskeyzzy.github.io/maguro.html')">
+            </form>
+        </textarea>
+        </form>
+    </div>
+    <br>
+    <br>
+    <h2>window.close()メソッド</h2>
+    <br>
+    <div>
+        <h3>意味</h3>
+        <p style="font-size:25px">現在のウィンドウ、またはそのページ上で呼び出されたウィンドウを閉じる。</p>
+        <p class="bf">このメソッドが許可されるのは、window.open() メソッドを用いたスクリプトにより開かれたウィンドウに対する呼び出しのみです。
+            <br>ウィンドウがスクリプトにより開かれたものでない場合、次のようなエラーがコンソールに表示されます: スクリプトはスクリプトによって開かれたウィンドウ以外を閉じることができません。</p>
+        <br>
+        <h3>サンプルコード</h3>
+        <br>
+        <p class="code">input type="button" value="サブウィンドウを閉じる" onclick="window.close()"</p>
+        <br>
+        <h3>使用例</h3>
+        <input type="button" value="サブウィンドウを開く" onclick="window.open('subwindow.html','#','width=310,height=260')">
+        <p>サブウィンドウのコード↓</p>
+        <form action="#">
+            <textarea name="two" rows="3" cols="70">
+                    <p class="code">input type="button" value="サブウィンドウを閉じる" onclick="window.close()"</p>
+            </textarea>
+        </form>
+    </div>
+    <br>
+    <br>
+    <h2>window.focus()メソッド</h2>
+    <br>
+    <div>
+        <h3>意味</h3>
+        <p style="font-size:25px">「ウィンドウを開く」ボタンをクリックすると、新たなウィンドウを開き、
+            <br>開いたウィンドウを前面に移動する。</p>
+        <br>
+        <h3>サンプルコード</h3>
+        <br>
+        <p class="code">フィールド.focus();</p>
+        <br>
+        <h3>使用例</h3>
+        <script>
+            function sampleOpenWindow() {
+                sampleWindow = window.open('', 'sample', 'width=300,height=300');
+                sampleWindow.document.write("<p>サンプルウィンドウ</p>");
+                sampleWindow.focus();
+            }
+        </script>
+        <div class="sample">
+            <button onclick="sampleOpenWindow()">ウィンドウを開く</button>
+        </div>
+
+        <p>今回記述したコード【javascript】↓</p>
+        <form action="#">
+            <textarea name="three" rows="6" cols="70">
+                    <script>
+                        function sampleOpenWindow() {
+                            sampleWindow = window.open('', 'sample', 'width=300,height=300');
+                            sampleWindow.document.write("<p>サンプルウィンドウ</p>");
+                            sampleWindow.focus();
+                        }
+                    </script>
+            </textarea>
+            <p>今回記述したコード【html】↓</p>
+            <textarea name="four" rows="6" cols="70">
+            <div class="sample">
+               <button onclick="sampleOpenWindow()">ウィンドウを開く</button>
+            </div>
+            </textarea>
+
+        </form>
+    </div>
+
+</body>
+
+</html>
