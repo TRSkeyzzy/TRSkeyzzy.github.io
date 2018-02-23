@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>jquery実装例</title>
+    <style>
+    .hoge2A{
+        text-align: center;
+        padding: .5em .75em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+    }
+
+    #tit{
+        text-align: center;
+    }
+
+    #tit {
+  position: relative;
+  padding: .3em;
+  background-color: #f0f0f0;
+}
+#tit span {
+  display: block;
+  padding: .75em 1em;
+  border: 1px dashed #ccc;
+}
+#tit::before,
+#tit::after {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-color: transparent;
+}
+#tit::before {
+  top: 100%;
+  left: 0;
+  border-width: 0 15px 15px 0;
+  border-right-color: #ccc;
+}
+#tit::after {
+  top: -15px;
+  right: 0;
+  border-style: solid;
+  border-width: 0 15px 15px 0;
+  border-bottom-color: #ccc;
+}
+
+.one{
+    padding-bottom: .5em;
+  border-bottom: 3px double #ccc;
+}
+
+.hoge2B{
+        text-align: center;
+        padding: .5em .75em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+}
+.hoge2C{
+        text-align: center;
+        padding: .5em .75em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+}
+
+.hoge3A{
+    float:left;
+    width:470px;
+}
+.red{
+    float:right;
+    width:250px;
+    height:100px;
+    background:#FC9;
+    display:table-cell;
+    vertical-align:middle;
+    color:#FFF;
+}
+.hoge3A{
+        text-align: center;
+        padding: .5em .75em;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+}
+    </style>
+</head>
+<body>
+
+    <div>
+        <h1 id="tit">jQuery実装例</h1>
+    </div><br>
+
+<h2 class="one">
+    1-クリックで色を変える
+</h2>
+        <div class="hoge2A">クリックすると緑色になります</div>
+        
+    <script src="https://code.jquery.com/jquery-3.3.1.js"
+    integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+    crossorigin="anonymous"></script>
+
+<script>
+       $(function(){
+    $(".hoge2A").click(function(){
+        $(this).css("background-color","green")
+    });
+});
+</script>
+<h2>【説明】</h2>
+<p>コードはこんな感じのコードで書きました。↓</p>
+<textarea name="msg" cols=60 rows=7>
+        <script>
+                $(function(){
+             $(".hoge2A").click(function(){
+                 $(this).css("background-color","green")
+             });
+         });
+         </script>
+</textarea>
+<br>
+<br>
+<h2 class="one">
+    2-マウスオーバーで色を表示させる
+</h2>
+
+<div class="hoge3A">ここにマウスオーバーすると右の■が赤くなります</div>
+<div class="red">&nbsp;</div>
+
+<script>
+$(function(){
+    $(".hoge3A").hover(
+    function(){
+        $(".red").css("background","red")
+            .text("はなすともどるよ！")
+    },
+    function(){
+        $(".red").css("background","#FC9")
+            .text("")
+    });
+});
+
+</script>
+
+    <br>
+    <br>
+    <h2>【説明】</h2>
+    <p>コードはこんな感じのコードで書きました。↓</p>
+    <textarea name="msg" cols=70 rows=16>
+            <script>
+                    $(function(){
+                        $(".hoge3A").hover(
+                        function(){
+                            $(".red").css("background","red")
+                                .text("はなすともどるよ！")
+                        },
+                        function(){
+                            $(".red").css("background","#FC9")
+                                .text("")
+                        });
+                    });
+                    
+                    </script>
+    </textarea>
+
+    <h2 class="one">3-クリックすると消える</h2>
+
+    <div class="hoge2C">クリックすると消えます</div>
+
+
+    <script>
+        $(function(){
+    $(".hoge2C").click(function(){
+        $(this).hide()
+    });
+});
+    </script>
+
+    <h2>【説明】</h2>
+
+    <p>コードはこんな感じのコードで書きました。↓</p>
+    <textarea name="msg" cols=50 rows=8>
+            <script>
+                    $(function(){
+                $(".hoge2C").click(function(){
+                    $(this).hide()
+                });
+            });
+                </script>
+    </textarea><br>
+    <p>引用元↓</p>
+    <p>http://ozpa-h4.com/2012/11/07/jquery-lecture/</p>
+</body>
+</html>
