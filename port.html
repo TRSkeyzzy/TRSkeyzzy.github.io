@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/port.css">   
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> 
+    <!-- jQuery -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+
+    <title>てんど</title>
+</head>
+<body>
+    <div id="wrapper">
+    <h1 id="tit">TND's page</h1>
+    <nav class="gnav">
+        <ul>
+            <li><a href="#tit">Home</a></li>
+            <li><a href="#syoukai">About</a></li>
+            <li><a href="#skill">Skill</a></li>
+        </ul>
+    </nav>
+    <br>
+    <br>
+    <br>
+    <br>
+    <center>
+    <img src="images/tnd.png">
+    </center>
+    <div id="syoukai">
+        <h2 class="jiko"><span>自己紹介</span></h2>
+        <img id="supaga" src="images/supaga.png">
+        <div id="syoukai2">
+            <br><br>
+            <h2>Name : 寺崎 <span id="tnd">天道</span></h2><br><br>
+            <h2>Hobby : ＧＵＩＴＡＲ　,　ス　ノ　ボ</h2><br><br>
+            <p>インドア、アウトドア問わず多趣味です！</p>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <div id="skill">
+            <h2 class="jiko"><span>Skill</span></h2>
+            <table>
+                <tr>
+                    <td><img src="images/HTML5.png" style="margin: 25px 25px 25px 25px;"><p style="text-align: center">HTML</p></td>
+                    <td><img src="images/css.png" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">CSS</p></td>
+                    <td><img src="images/javascript.png" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">JavaScript</p></td>
+                    <td><img src="images/php.png" style="margin: 25px 25px 25px 25px;"><p style="text-align: center">PHP</p></td>
+                    <td><img src="images/photoshop.jpg" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">Photoshop</p></td>
+                </tr>
+            </table>
+            <br><br>
+            <p>という感じで授業では勉強してきました。</p>
+    </div>
+
+    
+</div>
+<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
+<script>//■page topボタン
+
+        $(function(){
+        var topBtn=$('#pageTop');
+        topBtn.hide();
+        
+         
+        
+        //◇ボタンの表示設定
+        $(window).scroll(function(){
+          if($(this).scrollTop()>80){
+        
+            //---- 画面を80pxスクロールしたら、ボタンを表示する
+            topBtn.fadeIn();
+        
+          }else{
+        
+            //---- 画面が80pxより上なら、ボタンを表示しない
+            topBtn.fadeOut();
+        
+          } 
+        });
+        
+         
+        
+        // ◇ボタンをクリックしたら、スクロールして上に戻る
+        topBtn.click(function(){
+          $('body,html').animate({
+          scrollTop: 0},500);
+          return false;
+        
+        });
+        
+        
+        });</script>
+</body>
+</html>
