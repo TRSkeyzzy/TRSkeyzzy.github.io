@@ -1,0 +1,76 @@
+.gnav {
+    overflow: hidden;
+    float: right;
+    margin-top: 15px;
+    margin-left: 20px;
+  }
+  
+  .gnav li {
+    width: 140px;
+    text-align: center;
+    float: left;
+    font-size: 20px;
+    list-style: none;
+  }
+  
+  .gnav li a {
+    text-decoration: none;
+    color:black;
+    font-weight: bold;
+  }
+
+.box1{
+    float: left;
+    margin-right: 20px;
+    margin-left: 10px;
+}
+.box2{
+    float: left;
+    margin-right: 20px;
+}
+.box3{
+    float: left; 
+    margin-right: 10px;
+}
+td{text-align: center}
+
+footer {
+    clear:both;
+    height:50px;
+    text-align:center;
+    font-size:0.85em;
+    background-image:url(img/footer.gif);
+    background-repeat:no-repeat;
+    padding-top:30px;
+    display:block; 
+    border-top: rgb(56, 54, 54) solid ;
+    }
+
+    #tit1{
+        float: left;
+    }
+
+    .tit {
+        position: relative;
+        padding: .25em 0 .5em .75em;
+        border-left: 6px solid #ccc;
+      }
+      .tit::before {
+        position: absolute;
+        left: -6px;
+        bottom: 0;
+        content: '';
+        width: 6px;
+        height: 50%;
+        background-color: #3498db;
+      }
+      .tit::after {
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        content: '';
+        width: 100%;
+        height: 0;
+        border-bottom: 1px solid #ccc;
+      }
+    
