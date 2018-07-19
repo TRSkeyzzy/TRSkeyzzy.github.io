@@ -1,0 +1,19 @@
+img { max-width: 100%; }
+/*--- 以下、⾃由に表⽰を調整 ---*/
+
+@media screen and (min-width: 600px) and (max-width: 959px) {
+    /*--- タブレット向けスタイル ---*/
+    }
+    @media screen and (min-width: 960px) {
+     /*--- PC 向けスタイル ---*/
+    }
+
+    #wrapper{
+        max-width: 960px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    ul li{
+        list-style-type: none;
+    }

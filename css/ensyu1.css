@@ -1,0 +1,16 @@
+.local-nav{
+    margin: 1em 0;
+    
+}
+.local-nav-list{
+    display: flex;
+    border-bottom: 1px solid #ddd;
+    background-color: #eee;
+    justify-content: flex-end;
+}
+.local-nav-list__item{
+    list-style: none;
+}
+.local-nav-link{
+    padding: 5px;
+}
