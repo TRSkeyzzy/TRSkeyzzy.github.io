@@ -1,96 +1,96 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja" class="bg-cyan">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="css/port.css">   
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet"> 
-    <!-- jQuery -->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
-    <title>てんど</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ポートホリオ</title>
+  <link href="css/sandbox.css" rel="stylesheet">
+	<link href="css/drawer.css" rel="stylesheet"> 
+  <link href="css/port.css" rel="stylesheet">
 </head>
-<body>
-    <div id="wrapper">
-    <h1 id="tit">TND's page</h1>
-    <nav class="gnav">
-        <ul>
-            <li><a href="#tit">Home</a></li>
-            <li><a href="#syoukai">About</a></li>
-            <li><a href="#skill">Skill</a></li>
+<body class="drawer drawer--right">
+  <div id="wrapper" style="height: 20000px;"
+  data-500="background-color : rgb(255,255,255);"
+  data-1000="background-color : rgb(0,0,0);"
+  data-3500=""
+  data-4000="background-color : rgb(255,255,255);">
+  <header class="drawer-navbar" role="banner">
+    <div class="drawer-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand" id="bye" href="./index.html">TENDO TV バーイ</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu drawer-menu--right">
+          <li><a class="drawer-menu-item" href="./port.html">Home</a></li>
+          <li><a class="drawer-menu-item" href="./plofile.html">Profile</a></li>
+					<li><a class="drawer-menu-item" href="./works.html">Works</a></li>
+					<li><a class="drawer-menu-item" href="./contact.html">Contact</a></li>
         </ul>
-    </nav>
-    <br>
-    <br>
-    <br>
-    <br>
-    <center>
-    <img src="images/tnd.png">
-    </center>
-    <div id="syoukai">
-        <h2 class="jiko"><span>自己紹介</span></h2>
-        <img id="supaga" src="images/supaga.png">
-        <div id="syoukai2">
-            <br><br>
-            <h2>Name : 寺崎 <span id="tnd">天道</span></h2><br><br>
-            <h2>Hobby : ＧＵＩＴＡＲ　,　ス　ノ　ボ</h2><br><br>
-            <p>インドア、アウトドア問わず多趣味です！</p>
-        </div>
+      </nav>
+
     </div>
-    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="skill">
-            <h2 class="jiko"><span>Skill</span></h2>
-            <table>
-                <tr>
-                    <td><img src="images/HTML5.png" style="margin: 25px 25px 25px 25px;"><p style="text-align: center">HTML</p></td>
-                    <td><img src="images/css.png" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">CSS</p></td>
-                    <td><img src="images/javascript.png" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">JavaScript</p></td>
-                    <td><img src="images/php.png" style="margin: 25px 25px 25px 25px;"><p style="text-align: center">PHP</p></td>
-                    <td><img src="images/photoshop.jpg" style="margin: 25px 25px 25px 25px;"><p  style="text-align: center">Photoshop</p></td>
-                </tr>
-            </table>
-            <br><br>
-            <p>という感じで授業では勉強してきました。</p>
+  </header>
+
+  <!-- content -->
+  <main>
+    <div id="section_wrapper"
+    data-500="background: rgba(0, 0, 0, 0); color[swing]: rgb(0,0,0);"
+    data-1000="background: rgba(0, 0, 0, 1); color: rgb(255,255,255);">
+      
+      <div id="section1"
+      data-0="transform: scale(1);"
+      data-500="transform: scale(3);"
+      data-1100="left:50%;"
+      data-1600="left:120%;">
+        <h1 class="sc">TENDO</h1>
+      </div>
+      <div id="section2"
+        data-1700="left:120%;transform:scale(1);"
+        data-2300="left:50%;transform:scale(4);"
+        data-2800="left:50%;"
+        data-3400="left:-120%;">
+        <h1 class="sc">TV</h1>
+      </div>
     </div>
 
-    
+    <div id="section3"
+      data-4100="display:block;transform:scale(0);"
+      data-4600="transform:scale(4);"
+      data-5200=""
+      data-6000="transform:scale(0);">
+      　<h1 id="every">エブリデー</h1>
+      </div>
+
+      <div id="section4"
+      data-6000="bottom:200%;"
+      data-6900="bottom:15%;">
+    <img src="img/me.jpg" width="50%" height="50%"></div>
+
+    <div id="section5"
+    data-6000="top:200%;"
+    data-7000="top:10%;">
+    <h1>～Profile～</h1></div>
+  </main>
+
 </div>
-<p id="pageTop"><a href="#"><i class="fa fa-chevron-up"></i></a></p>
-<script>//■page topボタン
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  <script src="js/skrollr.min.js"></script>
+	<script>var s = skrollr.init();</script>
 
-        $(function(){
-        var topBtn=$('#pageTop');
-        topBtn.hide();
-        
-         
-        
-        //◇ボタンの表示設定
-        $(window).scroll(function(){
-          if($(this).scrollTop()>80){
-        
-            //---- 画面を80pxスクロールしたら、ボタンを表示する
-            topBtn.fadeIn();
-        
-          }else{
-        
-            //---- 画面が80pxより上なら、ボタンを表示しない
-            topBtn.fadeOut();
-        
-          } 
-        });
-        
-         
-        
-        // ◇ボタンをクリックしたら、スクロールして上に戻る
-        topBtn.click(function(){
-          $('body,html').animate({
-          scrollTop: 0},500);
-          return false;
-        
-        });
-        
-        
-        });</script>
 </body>
 </html>

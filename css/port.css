@@ -1,109 +1,67 @@
-.gnav {
-    overflow: hidden;
-    float: right;
-    margin-top: 15px;
-    margin-left: 20px;
-  }
-  
-  .gnav li {
-    width: 140px;
-    text-align: center;
-    float: left;
-    font-size: 20px;
-    list-style: none;
-  }
-  
-  .gnav li a {
-    text-decoration: none;
-    color:black;
-    font-weight: bold;
-  }
-  #wrapper{
-      max-width: 1020px;
-      margin: 0 auto;
-  }
-  #tit{
-      float: left;
-  }
-  
-  .jiko {
-    position: relative;
-    text-align: center;
-  }
-  .jiko span {
-    position: relative;
-    z-index: 2;
-    display: inline-block;
-    margin: 0 4em;
-    padding: 0 1em;
-    background-color: #fff;
-    text-align: left;
-  }
-  .jiko::before {
-    position: absolute;
-    top: 50%;
-    z-index: 1;
-    content: '';
-    display: block;
-    width: 100%;
-    height: 1px;
-    background: #ccc;
-    background: -webkit-linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
-    background: linear-gradient(-45deg, transparent, #ccc 10%, #ccc 90%, transparent);
-  }
-  #supaga{
-    float:right;
-  }
-  #syoukai2{
-    float: left;
-  }
-  #tnd{
-    font-size: 40px;
-  }
-  #syoukai{
-    margin: auto;
-  }
-  #end{
-    background-color:darkgray;
-  }
-  #end {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 100px;
+/* scroll */
+#wrapper{
+	width: 100%;
+	height: 100%;
+}
+#section_wrapper{
+width: 100%;
+height: 100%;
+}
+ .sc {
+		white-space: nowrap;
+		font-size: 100%;
+ }
+
+ #section1{
+	 position: fixed;
+	 top: 50%;
+		left: 50%;
+	  margin: 0;
+		padding: 0;
+		display: block;
+ }
+ #section2{
+	 position: fixed;
+	 top: 50%;
+		left: 50%;
+	  margin: 0;
+		padding: 0;
+		display: block;
+ }
+
+ #section3{
+	position: fixed;
+	top: 50%;
+	 left: 50%;
+	 margin: 0;
+	 padding: 0;
+	 display: block;
+}
+#every{
+	font-size: 100%;
+}
+#section4{
+	position: fixed;
+	margin-top: 20px;
+	left: 10%;
+	 margin: 0;
+	 padding: 0;
+	 display: block;
+	 float: left;
 }
 
-#pageTop {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
+#section5{
+	position: fixed;
+	right: 20%;
+	float: right;
+	 margin: 0;
+	 padding: 0;
+	 display: block;
 }
+ div{
+	 display: block;
+ }
 
- 
-
-#pageTop i {
-  padding-top: 6px
-}
-
- 
-
-#pageTop a {
-  display: block;
-  z-index: 999;
-  padding: 8px 0 0 8px;
-  border-radius: 30px;
-  width: 35px;
-  height: 35px;
-  background-color: #9FD6D2;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-align: center;
-}
-
- 
-
-#pageTop a:hover {
-  text-decoration: none;
-  opacity: 0.7;
-}
+ #bye{
+	 font-size: 100%;
+ }
