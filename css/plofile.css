@@ -1,0 +1,35 @@
+body{
+    background: url(../img/tinkle.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 100%;
+}
+#my{
+    font-family: 'Charmonman', cursive;
+    text-align: center;;
+}
+#my2{
+    margin-top: 40px;
+    text-align: center;
+    font-family: 'Charmonman', cursive;
+}
+
+#plo1{
+    border-bottom: white;
+    text-align: center;
+}
+
+#plo2{
+    border-bottom: white;
+    text-align: center;
+}
+.pl{
+    font-family: 'Oswald', sans-serif;
+    font-size: 30px;
+}
+
+#ploin{
+    display: inline-block;
+    justify-content: space-around;
+}

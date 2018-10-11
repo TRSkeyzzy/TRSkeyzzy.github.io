@@ -1,0 +1,37 @@
+body{
+    background: url(../img/giphy.gif);
+    background-size: 50%;
+    color: white;
+    font-size: 100%
+}
+
+#w1{
+    font-family: 'Charmonman', cursive;    
+}
+
+#wor1{
+    text-align: center;
+}
+
+#wor2{
+    text-align: center;
+    margin-top: 150px;
+}
+#w2{
+    font-family: 'Noto Serif JP', sans-serif;
+}
+
+#wor3{
+    display: inline-block;
+    justify-content: space-around;
+    display: flex;
+}
+
+#wp{
+    font-size: 100%;
+}
+
+#wor4{
+    text-align: center;
+    margin-top: 150px;
+}
