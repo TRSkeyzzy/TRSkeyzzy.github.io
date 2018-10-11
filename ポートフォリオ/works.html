@@ -1,0 +1,74 @@
+
+<!DOCTYPE html>
+<html lang="ja" class="bg-cyan">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>ポートホリオ</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="css/sandbox.css" rel="stylesheet">
+	<link href="css/drawer.css" rel="stylesheet">
+  <link href="css/works.css" rel="stylesheet">
+</head>
+<body class="drawer drawer--right">
+  <div id="wrapper" style="height: 1000px;">
+  <header class="drawer-navbar" role="banner">
+    <div class="drawer-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand" id="bye" href="./index.html">TENDO TOWN</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu drawer-menu--right">
+          <li><a class="drawer-menu-item" href="./port.html">Home</a></li>
+          <li><a class="drawer-menu-item" href="./plofile.html">Profile</a></li>
+					<li><a class="drawer-menu-item" href="./works.html">Works</a></li>
+					<li><a class="drawer-menu-item" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- content -->
+<div id="wor1"><h1 id="w1">Works</h1></div>
+ 
+
+<div id="wor2"><h1 id="w2">学んだ項目</h1></div>
+
+<div id="wor3">
+  <img src="img/photoshop.jpg" width="20%" height="20%">
+  <img src="img/HTML5.png" width="20%" height="20%">
+  <img src="img/css.png" width="20%" height="20%">
+  <img src="img/php.png" width="20%" height="20%">
+</div>
+
+<div id="wor4">
+  <h1 id="w3">取得した資格</h1>
+  <p class="wp">Java能力認定試験</p>
+  <p class="wp">基本情報技術者試験</p>
+  <p class="wp">ITパスポート試験</p>
+  <p class="wp">webクリエイター能力認定試験</p>
+
+</div>
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  <script src="js/skrollr.min.js"></script>
+	<script>var s = skrollr.init();</script>
+
+</body>
+</html>

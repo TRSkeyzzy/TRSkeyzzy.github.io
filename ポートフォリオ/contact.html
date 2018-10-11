@@ -1,0 +1,92 @@
+
+<!DOCTYPE html>
+<html lang="ja" class="bg-cyan">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロフィール</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="css/sandbox.css" rel="stylesheet">
+    <link href="css/drawer.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+  <link href="css/contact.css" rel="stylesheet">
+
+</head>
+<body class="drawer drawer--right">
+  <div id="wrapper" style="height: 500px;">
+  <header class="drawer-navbar" role="banner">
+    <div class="drawer-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand" id="bye" href="./index.html">TENDO TOWN</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu drawer-menu--right">
+          <li><a class="drawer-menu-item" href="./port.html">Home</a></li>
+          <li><a class="drawer-menu-item" href="./plofile.html">Profile</a></li>
+					<li><a class="drawer-menu-item" href="./works.html">Works</a></li>
+					<li><a class="drawer-menu-item" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- content -->
+  <div id="cnt1"><h1 id="ct1">Contact Form</h1></div>
+  <div class="formCont">
+    <table border="0" cellpadding="0" cellspacing="0" width="100%">
+    <tbody>
+   
+   
+    <tr>
+    <th>氏名<span class="required">必須</span></th>
+    <td>
+    <input type="text" name="text-o-name" value="" size="30" class="validate[required]">
+    <span>例：館場　花子</span>
+    </td>
+    </tr>
+    <tr>
+    <th>メールアドレス</th>
+    <td>
+    <input type="email" name="email-o-mail" value="" size="40" class="validate[optional,custom[email]]">
+    <span>例：yakamoai@docomo.ne.jp</span>
+    <p class="formRule">※ご記入頂いたメールアドレスに確認用メールをお送りします。</p>
+    </td>
+    </tr>
+   
+    <tr>
+    <th>お問い合わせ内容</th>
+    <td><textarea name="textarea-o" cols="40" rows="10"></textarea>
+    <p class="formRule">寮見学や個別相談の希望の有無やご意見・ご要望などをご自由にお書きください。</p>
+    </td>
+    </tr>
+    </tbody>
+    </table>
+    
+    <div id="send"><a href="aizai.html"><input type="submit" value="送信する" /></a></div>
+    </form>
+    </div>
+    
+
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  <script src="js/skrollr.min.js"></script>
+	<script>var s = skrollr.init();</script>
+
+</body>
+</html>
