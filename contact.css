@@ -1,0 +1,32 @@
+body{
+    background: url(../img/tinkle.gif);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: 100%;
+}
+
+#formCont{
+    left: 50%;
+    text-align: center;
+    margin-top: 250px;
+}
+
+#cnt1{
+    font-family: 'Charmonman', cursive;
+    font-size: 100%;
+    text-align: center;
+}
+
+#send{
+    text-align: center;
+}
+
+#thx{
+    font-size: 150%;
+    text-align: center;
+}
+
+#aizai{
+    margin-top: 250px;
+}

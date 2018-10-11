@@ -1,0 +1,78 @@
+
+<!DOCTYPE html>
+<html lang="ja" class="bg-cyan">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>プロフィール</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+  <link href="css/sandbox.css" rel="stylesheet">
+    <link href="css/drawer.css" rel="stylesheet">
+  <link href="css/plofile.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Charmonman" rel="stylesheet">
+</head>
+<body class="drawer drawer--right">
+  <div id="wrapper" style="height: 2500px;">
+  <header class="drawer-navbar" role="banner">
+    <div class="drawer-container">
+      <div class="drawer-navbar-header">
+        <a class="drawer-brand" id="bye" href="./index.html">TENDO TOWN</a>
+        <button type="button" class="drawer-toggle drawer-hamburger">
+          <span class="sr-only">toggle navigation</span>
+          <span class="drawer-hamburger-icon"></span>
+        </button>
+      </div>
+
+      <nav class="drawer-nav" role="navigation">
+        <ul class="drawer-menu drawer-menu--right">
+          <li><a class="drawer-menu-item" href="./port.html">Home</a></li>
+          <li><a class="drawer-menu-item" href="./plofile.html">Profile</a></li>
+					<li><a class="drawer-menu-item" href="./works.html">Works</a></li>
+					<li><a class="drawer-menu-item" href="./contact.html">Contact</a></li>
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+  <!-- content -->
+<div id="plo1"><h1 id="my">My Plofile</h1><img src="img/me2.jpg" width="40%" height="40%">
+<p class="pl">What's your Name? : Terasaki Tendo</p>
+<p class="pl">How old are you?  : Oh..19..</p>
+<p class="pl">Where are you from? : Japan! <span style="font-size: 50px">Iwate!</span><span style="font-size: 60px">Miyako!!</span></p>
+</div>
+<br>
+<div id="plo2"><h1 id="my2" style="font-size: 50px">Hobby's</h1><br>
+<p class="pl">服集め</p>
+<p class="pl">ストリートスナップ</p>
+<p class="pl">ゲーム</p>
+<p class="pl">BO3</p>
+</div>
+
+<br>
+<div id="plo2"><h1 id="my2" style="font-size: 50px">Snap list</h1><br>
+<div id="ploin">
+  <img src="img/cobo1.jpg" width="30%" height="30%">
+  <img src="img/cobo2.jpg" width="30%" height="30%"><br>
+  <img src="img/cobo3.jpg" width="30%" height="30%">
+  <img src="img/ore.jpg" width="30%" height="30%">
+</div>
+</div>
+
+
+</div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="js/iscroll.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="js/drawer.min.js" charset="utf-8"></script>
+  <script>
+    $(document).ready(function() {
+      $('.drawer').drawer();
+    });
+  </script>
+  <script src="js/skrollr.min.js"></script>
+	<script>var s = skrollr.init();</script>
+
+</body>
+</html>
